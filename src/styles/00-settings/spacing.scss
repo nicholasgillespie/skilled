@@ -1,0 +1,71 @@
+$spacing: (
+  "title": "Spacing",
+  "description":
+    "Consistent spacing sizes, based on a ratio, with min and max sizes. This allows you to set spacing based on the context size. For example, min for mobile and max for desktop browsers.",
+  "meta": (
+    "scaleGenerator":
+      "https://utopia.fyi/space/calculator/?c=330,18,1.2,1200,24,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8,s-l|s-xl&g=s,l,xl,12",
+  ),
+  "items": (
+    (
+      "name": "S",
+      "min": 18,
+      "max": 20,
+    ),
+    (
+      "name": "M",
+      "min": 27,
+      "max": 30,
+    ),
+    (
+      "name": "L",
+      "min": 36,
+      "max": 40,
+    ),
+    (
+      "name": "XL",
+      "min": 54,
+      "max": 60,
+    ),
+    (
+      "name": "2XL",
+      "min": 72,
+      "max": 80,
+    ),
+    (
+      "name": "S - L",
+      "min": 18,
+      "max": 40,
+    ),
+    (
+      "name": "S - XL",
+      "min": 18,
+      "max": 60,
+    ),
+    (
+      "name": "M - S",
+      "min": 27,
+      "max": 20,
+    ),
+    (
+      "name": "M - 2XL",
+      "min": 36,
+      "max": 80,
+    ),
+    (
+      "name": "L - XL",
+      "min": 36,
+      "max": 60,
+    ),
+    (
+      "name": "L - 2XL",
+      "min": 36,
+      "max": 80,
+    ),
+    (
+      "name": "L - XS",
+      "min": 40,
+      "max": 16,
+    ),
+  ),
+);

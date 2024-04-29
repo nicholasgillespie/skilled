@@ -1,0 +1,23 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-semi-loose);
+  display: inline-block;
+  color: var(--color-white);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: -8px;
+    inline-size: 100%;
+    block-size: 3px;
+    background-color: var(--color-eucaplyptus);
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--color-eucaplyptus);
+  }
+}

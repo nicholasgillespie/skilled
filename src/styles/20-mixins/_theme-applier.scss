@@ -1,0 +1,125 @@
+// Import design token config
+@import "../00-settings/theme-config";
+
+// Generate global CSS custom properties from theme (use in 30-base/root.scss file)
+@mixin themeCssVariables() {
+  @each $group in $groups {
+    $tokenName: map-get($group, "key");
+    $prefix: map-get($group, "prefix");
+    $token: map-get($theme, $tokenName);
+
+    @each $itemName, $itemValue in $token {
+      @if type-of($itemValue) == "map" {
+        @each $subItemName, $subItemValue in $itemValue {
+          --#{$prefix}-#{$itemName}-#{$subItemName}: #{$subItemValue};
+        }
+      } @else {
+        @if $itemName == "standard" {
+          --#{$prefix}: #{$itemValue};
+        } @else {
+          --#{$prefix}-#{$itemName}: #{$itemValue};
+        }
+      }
+    }
+  }
+}
+
+// @mixin themeCssVariables() {
+//   @each $group in $groups {
+//     $tokenName: map-get($group, "key");
+//     $prefix: map-get($group, "prefix");
+//     $token: map-get($theme, $tokenName);
+
+//     @each $itemName, $itemValue in $token {
+//       @if type-of($itemValue) == "map" {
+//         @each $subItemName, $subItemValue in $itemValue {
+//           --#{$prefix}-#{$itemName}-#{$subItemName}: #{$subItemValue};
+//         }
+//       } @else {
+//         @if $itemName == "standard" {
+//           --#{$prefix}: #{$itemValue};
+//         } @else {
+//           @if $tokenName == "fontFamily" {
+//             $fontFamilies: "";
+//             @each $fontFamily in $itemValue {
+//               $fontFamilies: $fontFamilies +
+//                 '"#{$fontFamily}"' +
+//                 if(
+//                   index($itemValue, $fontFamily) != length($itemValue),
+//                   ", ",
+//                   ""
+//                 );
+//             }
+//             --#{$prefix}-#{$itemName}: #{$fontFamilies};
+//           } @else {
+//             @debug "--#{$prefix}-#{$itemName}: #{$itemValue};";
+//             --#{$prefix}-#{$itemName}: #{$itemValue};
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// Mixin to generate utility classes from theme (use in 90-utilities/index.scss file)
+@mixin themeUtilityClasses() {
+  @each $group in $groups {
+    $tokenName: map-get($group, "key");
+    $prefix: map-get($group, "prefix");
+    $properties: map-get($group, "properties");
+    $token: map-get($theme, $tokenName);
+
+    @if $properties != null {
+      @each $property in $properties {
+        $propOrAbbr: $property;
+
+        @if $property == "background-color" {
+          $propOrAbbr: "background";
+        }
+        @if $tokenName == "spacing" {
+          $propOrAbbr: abbreviate(listToString($property));
+          .u-#{$propOrAbbr}-auto {
+            #{$property}: auto;
+          }
+          .u-#{$propOrAbbr}-zero {
+            #{$property}: 0;
+          }
+        }
+
+        @each $itemName in map-keys($token) {
+          .u-#{$propOrAbbr}-#{$itemName} {
+            #{$property}: var(--#{$prefix}-#{$itemName});
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate custom utility classes from theme (use in 90-utilities/index.scss file)
+@mixin themeUtilityCustoms() {
+  $tokenPrefixesProperties: (
+    ("spacing", "flow-space", "--flow-space"),
+    ("spacing", "region-space", "--region-space"),
+    ("spacing", "gutter", "--gutter")
+  );
+
+  @each $tokenName, $prefix, $property in $tokenPrefixesProperties {
+    $token: map-get($theme, $tokenName);
+    $tokenPrefix: null;
+
+    @each $group in $groups {
+      @if map-get($group, "key") == $tokenName {
+        $tokenPrefix: map-get($group, "prefix");
+      }
+    }
+
+    @if $token != null and $tokenPrefix != null {
+      @each $itemName, $itemValue in $token {
+        .u-#{$prefix}-#{$itemName} {
+          #{$property}: var(--#{$tokenPrefix}-#{$itemName});
+        }
+      }
+    }
+  }
+}

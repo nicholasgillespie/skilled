@@ -1,0 +1,168 @@
+@use "../10-functions/theme-accessor" as *;
+@use "../20-mixins/media-query" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  // outline: solid 1px hotpink;
+}
+
+// GLOBAL SETTINGS ////////////////////
+body {
+  // color: get(color, dark-purple);
+  // background-color: get(color, "white");
+  // accent-color: get(color, eucaplyptus);
+  // font-size: get(font-size, step-0);
+  // font-family: get(font-family, base);
+  // font-weight: get(font-weight, regular);
+  // line-height: get(line-height, extra-loose);
+  // letter-spacing: get(letter-spacing, semi-loose);
+  // word-break: break-word;
+}
+
+// DOCUMENT STRUCTURE ////////////////////
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+// TYPOGRAPHY ////////////////////
+h1,
+h2,
+h3,
+h4 {
+  font-family: get(font-family, brand);
+  font-weight: get(font-weight, medium);
+  letter-spacing: -0.02ch;
+  text-wrap: balance;
+  hyphens: auto;
+}
+
+h1 {
+  font-size: get(font-size, step-3);
+  max-inline-size: 30ch;
+}
+
+h2 {
+  // font-size: get(font-size, step-4);
+}
+
+h3 {
+  // font-size: get(font-size, step-3);
+}
+
+h4 {
+  // font-size: get(font-size, step-2);
+}
+
+// CONTENT ELEMENTS ////////////////////
+// TEXT ELEMENTS
+p {
+  max-inline-size: var(--measure, 66ch);
+}
+
+b {
+  // color: get-theme("color", "highlight");
+}
+
+// LIST ELEMENTS
+
+// FORM ELEMENTS
+
+// TABLE ELEMENTS
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+// IMAGE & SVG ELEMENTS
+
+// INTERACTIVE ELEMENTS ////////////////////
+// A ELEMENT SPECIFICS
+a {
+  //
+
+  &:hover,
+  &:focus {
+    //
+  }
+
+  &[aria-current="page"] {
+    //
+  }
+
+  & > img {
+    display: inline-block;
+  }
+}
+
+// BUTTON STYLES
+button {
+  // https://piccalil.li/blog/link-button
+  // https://piccalil.li/blog/use-transparent-borders-and-outlines-to-assist-with-high-contrast-mode
+  // view sara soueidan's article on this
+
+  &:hover,
+  &:focus {
+    //
+  }
+}
+
+// INTERACTIVE STATES ////////////////////
+// SELECTION
+
+// FOCUS AND TARGET STATES
+:focus {
+  outline-offset: 0.65ch;
+}
+
+:target {
+  scroll-margin-block: 2ex;
+}
+
+// INTERFACE ELEMENTS ////////////////////
+// SELECTION
+::selection {
+  // color: get-theme("color", "bold");
+  // background: get-color("core", "primary");
+}
+
+// SKIP LINK
+.skip-link {
+  &-container {
+    position: absolute;
+    inset-block-start: 0.5em;
+    z-index: 999;
+  }
+
+  & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-block-size: 100%;
+    // font-family: get-font-family("code");
+    // font-size: get(font-size, step-1);
+  }
+
+  &:not(:focus) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+
+// SCROLLBAR ////////////////////

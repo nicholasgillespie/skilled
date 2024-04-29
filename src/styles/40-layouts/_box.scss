@@ -1,0 +1,31 @@
+/*
+ * BOX
+ * A layout that can be applied to a block-level element to provide padding, border, color, and background color.
+ * Info: https://every-layout.dev/layouts/box/
+ * 
+ * CUSTOM PROPERTIES AND CONFIGURATION
+ * --box-padding: The padding of the box.
+ * --box-border-style: The border style of the box.
+ * --box-color: The color of the box.
+ * --box-bg: The background color of the box.
+ * 
+ * A data attribute [data-box="invert"] can be used to invert the color and background color of the box.
+ */
+
+.l-box {
+  padding: var(--box-space, var(--gutter));
+  color: var(--box-color, black);
+  background-color: var(--box-bg, white);
+  border: var(--box-border-style, solid);
+  border-radius: var(--box-border-radius, 0);
+  max-inline-size: unset;
+
+  & * {
+    color: inherit;
+  }
+
+  &[data-box="invert"] {
+    --box-color: white;
+    --box-bg: black;
+  }
+}
