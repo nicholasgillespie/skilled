@@ -4,11 +4,11 @@ Visit the live website here: [Skilled Project Website](https://nicholasgillespie
 
 ## Overview
 
-The Skilled e-leaning project is a Vite and PostCSS-based project, hosted on GitHub Pages. It incorporates the in-development W3C design system, utilizing SCSS syntax for styling. The design approach is heavily influenced by Andy Bell's CUBE CSS methodology, promoting a judicious use of class names and a structured, scalable architecture.
+The Skilled e-leaning project is a Vite and PostCSS-based project, hosted on GitHub Pages. It incorporates the in-development W3C design system, utilizing SCSS syntax for styling.
 
 [![Screenshot of the Skilled project](./docs/design/preview.jpg)](https://nicholasgillespie.github.io/skilled/)
 
-The project provides:
+The project uses:
 
 - **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 - **PostCSS**: A tool for transforming CSS with JavaScript, allowing for more advanced CSS processing.

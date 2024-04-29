@@ -8,24 +8,34 @@ $text-sizes: (
   ),
   "items": (
     (
-      "name": "Step 0",
+      "name": "Body S",
       "min": 16,
       "max": 18,
     ),
     (
-      "name": "Step 1",
+      "name": "Body M",
       "min": 32,
       "max": 40,
     ),
     (
-      "name": "Step 2",
+      "name": "Heading S",
       "min": 56,
       "max": 64,
     ),
     (
-      "name": "Step 3",
+      "name": "Heading M",
       "min": 50,
       "max": 80,
+    ),
+    (
+      "name": "Heading L",
+      "min": 50,
+      "max": 40,
+    ),
+    (
+      "name": "Heading XL",
+      "min": 40,
+      "max": 56,
     ),
   ),
 );
