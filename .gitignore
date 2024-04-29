@@ -36,4 +36,4 @@ temp*
 bin/
 
 # Ignore 'README*' in subdirectories
-**/README*
+*/README*
