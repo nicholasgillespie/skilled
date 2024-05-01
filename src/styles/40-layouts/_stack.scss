@@ -24,6 +24,6 @@
   }
 
   & > * + * {
-    margin-block-start: var(--stack-space, calc(var(--leading) * 1rem));
+    margin-block-start: var(--space-stack, calc(var(--leading) * 1rem));
   }
 }

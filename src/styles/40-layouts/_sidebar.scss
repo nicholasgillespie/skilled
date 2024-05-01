@@ -7,7 +7,7 @@
  * --sidebar-target-width: The preferred width of the sidebar.
  * --sidebar-content-min-width: The minimum width of the main content area.
  * --sidebar-vertical-alignment: The vertical alignment of the sidebar and main content.
- * --sidebar-gap: The space between the sidebar and the main content.
+ * --space-sidebar: The space between the sidebar and the main content.
  * 
  * A data attribute [data-sidebar="rtl"] can be used to reverse the direction of the layout.
  */
@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: var(--sidebar-vertical-alignment, stretch);
-  gap: var(--sidebar-gap, var(--gutter));
+  gap: var(--space-sidebar, var(--space-gutter));
 
   & > :first-child {
     flex-basis: var(--sidebar-target-width, 20rem);

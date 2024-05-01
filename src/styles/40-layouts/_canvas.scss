@@ -13,19 +13,16 @@
  */
 
 .l-canvas {
-  --canvas-full-width: minmax(var(--gutter), 1fr);
-  --canvas-breakout: minmax(
-    0,
-    calc(((var(--layout-breakout) - var(--layout-base-max))) / 2)
+  --canvas-full-width: minmax(var(--space-gutter), 1fr);
+  --canvas-content: min(
+    100% - (var(--space-gutter) * 2),
+    var(--layout-base-max)
   );
-  --canvas-content: min(100% - (var(--gutter) * 2), var(--layout-base-max));
 
   display: grid;
   grid-template-columns:
     [full-width-start] var(--canvas-full-width)
-    [breakout-start] var(--canvas-breakout)
     [content-start] var(--canvas-content) [content-end]
-    var(--canvas-breakout) [breakout-end]
     var(--canvas-full-width) [full-width-end];
   position: relative;
 
@@ -43,7 +40,7 @@
     grid-template-columns: inherit;
 
     &[data-full-width="contained"] {
-      padding-inline: var(--gutter);
+      padding-inline: var(--space-gutter);
     }
   }
 }

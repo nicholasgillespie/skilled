@@ -5,7 +5,7 @@
  * 
  * CUSTOM PROPERTIES AND CONFIGURATION
  * --repel-vertical-alignment: How items should align vertically.
- * --repel-gap: The space between each item.
+ * --space-repel: The space between each item.
  * 
  * A data attribute [data-repel="nowrap"] can be used to prevent items from wrapping onto the next line.
  */
@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: var(--repel-vertical-alignment, center);
-  gap: var(--repel-gap, var(--gutter));
+  gap: var(--space-repel, var(--space-gutter));
 
   &[data-repel="nowrap"] {
     flex-wrap: nowrap;

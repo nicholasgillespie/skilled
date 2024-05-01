@@ -13,6 +13,7 @@
   box-sizing: var(--center-box-sizing, content-box);
   margin-inline: auto;
   text-align: center;
+  max-inline-size: var(--measure);
 
   &[data-center="child-elements"] {
     display: flex;

@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   min-block-size: min(100dvh, 100vh);
-  padding: var(--cover-padding, var(--gutter));
+  padding: var(--space-cover, var(--space-gutter));
 
   & > * {
-    margin-block: var(--cover-space, var(--gutter));
+    margin-block: var(--space-cover, var(--space-gutter));
   }
 
   & > :first-child:not(h1) {
@@ -25,7 +25,8 @@
     margin-block-end: 0;
   }
 
-  & > :nth-child(2) {
+  & > h1 {
     margin-block: auto;
+    background-color: red;
   }
 }

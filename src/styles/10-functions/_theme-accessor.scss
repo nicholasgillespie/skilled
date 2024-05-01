@@ -2,7 +2,10 @@
 @import "../00-settings/theme-config";
 
 // Function to retrieve token values based on property
-@function get($property: null, $value: null) {
+@function get($property: null, $value: null, $fallback: null) {
+  // Store the original property value
+  $originalProperty: $property;
+
   // If the property is "space", "margin", or "padding", set it to "margin" or "padding"
   @if $property == "space" {
     $property: "margin";
@@ -39,6 +42,10 @@
       $prefix: map-get($group, "prefix");
       $items: map-get($theme, $tokenName);
 
+      // Convert color values to a string
+      $value: if(type-of($value) == "color", inspect($value), $value);
+
+      // If value exists in map, return CSS variable; else, warn invalid value
       @if $prefix and map-has-key($items, $value) {
         @if $value == "standard" {
           @return var(--#{$prefix});
@@ -46,6 +53,9 @@
           @return var(--#{$prefix}-#{$value});
         }
       } @else {
+        @if $originalProperty == "space" {
+          $property: "space";
+        }
         @warn "Invalid value `#{$value}` for property `#{$property}`. Available values are: #{map-keys($items)}.";
         @return null;
       }

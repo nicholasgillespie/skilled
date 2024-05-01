@@ -4,7 +4,7 @@
  * Info: https://every-layout.dev/layouts/switcher/
  * 
  * CUSTOM PROPERTIES AND CONFIGURATION
- * --switcher-gap: The space between each item.
+ * --space-switcher: The space between each item.
  * --switcher-content-alignment: How items should distribute in the vertical space when there is extra space in the cross-axis.
  * --switcher-vertical-alignment: How items should align horizontally.
  * --switcher-target-width: The target width for each item.
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   align-content: var(--switcher-content-alignment, flex-start);
   align-items: var(--switcher-vertical-alignment, flex-start);
-  gap: var(--switcher-gap, var(--gutter));
+  gap: var(--space-switcher, var(--space-gutter));
 
   & > * {
     flex-grow: 1;

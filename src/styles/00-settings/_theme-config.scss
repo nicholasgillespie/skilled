@@ -15,8 +15,6 @@
 @import "../10-functions/helpers/value-providers";
 @import "../10-functions/helpers/map-manipulation";
 
-// @debug $spacing;
-
 // Format and process design tokens
 $viewports: formatToken(getItems($viewports));
 $colors: formatToken(getItems($colors));
@@ -29,14 +27,11 @@ $fontFamily: formatToken(getItems($fonts));
 $fontWeight: formatToken(getItems($text-weights));
 $letterSpacing: formatToken(getItems($text-tracking));
 
-// @debug $fontFamily;
-
 // Centralize design token values in theme map
 $theme: (
   "breakpoints": $viewports,
   "layout": (
     "base-max": #{map-get($viewports, "max")}px,
-    "breakout": #{map-get($viewports, "max") * 1.2}px,
   ),
   "colors": $colors,
   "spacing": $spacing,

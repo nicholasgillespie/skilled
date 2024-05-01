@@ -16,17 +16,17 @@
   inline-size: 100%;
   max-inline-size: calc(
     var(--wrapper-max-inline-size, var(--layout-base-max)) +
-      var(--wrapper-gutter, var(--gutter)) * 2
+      var(--space-wrapper, var(--space-gutter)) * 2
   );
   margin-inline: auto;
-  padding-inline: var(--wrapper-gutter, var(--gutter));
+  padding-inline: var(--space-wrapper, var(--space-gutter));
   position: relative;
+
+  &[data-wrapper="gutterless"] {
+    --space-wrapper: 0px;
+  }
 
   &[data-wrapper="full-width"] {
     --wrapper-max-inline-size: 100%;
-  }
-
-  &[data-wrapper="gutterless"] {
-    --wrapper-gutter: 0px;
   }
 }

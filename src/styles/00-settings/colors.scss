@@ -27,5 +27,13 @@ $colors: (
       "name": "White",
       "value": #ffffff,
     ),
+    (
+      "name": "Orange to Pink",
+      "value": linear-gradient(#ff6f48, #f02aa6),
+    ),
+    (
+      "name": "Purple to Pink",
+      "value": linear-gradient(#4851ff, #f02aa6),
+    ),
   ),
 );
