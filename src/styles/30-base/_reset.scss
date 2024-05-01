@@ -21,19 +21,19 @@ body {
   writing-mode: horizontal-tb;
   direction: ltr;
   overflow-x: hidden;
-  line-height: 1.5;
+  // line-height: 1.5;
 }
 
 // Set shorter line heights on headings and interactive elements
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// button,
+// input,
+// label {
+//   line-height: 1.1;
+// }
 
 // Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
 ul[role="list"],

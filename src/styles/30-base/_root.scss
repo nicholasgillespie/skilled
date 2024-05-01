@@ -12,6 +12,7 @@
   // Colors
   --color-global-bg: #{get(color, white)};
   --color-global-text: #{get(color, cool-grey)};
+  --color-heading-text: #{get(color, dark-blue)};
   --color-surface-bg: #{get(color, dark-blue)};
   --color-surface-bg-interact: #{get(color, slate-blue)};
   --color-surface-text: #{get(color, white)};
@@ -21,7 +22,7 @@
   --space-gutter: #{get(space, s-l)};
   --space-gutter-s: #{get(space, s)};
   --space-gutter-l: #{get(space, l)};
-  --space-region: #{get(space, xl-3xl)};
+  --space-region: #{get(space, xl-5xl)};
 
   // Typography - Text Sizes
   --text-size-base: #{get(font-size, step-0)};

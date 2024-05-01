@@ -53,6 +53,16 @@ $spacing: (
       "max": 108,
     ),
     (
+      "name": "4XL",
+      "min": 128,
+      "max": 144,
+    ),
+    (
+      "name": "5XL",
+      "min": 160,
+      "max": 180,
+    ),
+    (
       "name": "S - M",
       "min": 16,
       "max": 27,
@@ -63,9 +73,14 @@ $spacing: (
       "max": 36,
     ),
     (
-      "name": "XL - 3XL",
+      "name": "XL - 4XL",
       "min": 48,
-      "max": 108,
+      "max": 144,
+    ),
+    (
+      "name": "XL - 5XL",
+      "min": 48,
+      "max": 180,
     ),
   ),
 );

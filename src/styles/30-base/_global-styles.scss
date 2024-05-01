@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  outline: solid 1px hotpink;
+  // outline: solid 1px hotpink;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -28,6 +28,11 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+header {
+  padding-block-start: get(space, s-m);
+  overflow: hidden;
+}
+
 main {
   overflow: hidden;
 }
@@ -45,20 +50,32 @@ h4 {
 }
 
 h1 {
-  // font-size: get(font-size, step-3);
+  font-size: var(--text-size-heading-1);
   max-inline-size: 30ch;
+  color: var(--color-heading-text);
 }
 
 h2 {
-  // font-size: get(font-size, step-4);
+  font-size: var(--text-size-heading-2);
 }
 
 h3 {
-  // font-size: get(font-size, step-3);
+  font-size: var(--text-size-heading-3);
 }
 
 h4 {
-  // font-size: get(font-size, step-2);
+  font-size: var(--text-size-heading-4);
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: get(line-height, short);
+  line-height: 1.1;
 }
 
 // CONTENT ELEMENTS ////////////////////
@@ -103,6 +120,32 @@ a {
   }
 }
 
+.link {
+  // display: inline-block;
+  // font-size: var(--size-body-s);
+  // font-weight: var(--font-weight-bold);
+  // background-color: red;
+  // padding: 1em 2.5em;
+  // line-height: 28px;
+  // text-decoration: none;
+  // font-weight: var(--font-weight-medium);
+  // letter-spacing: var(--tracking-semi-loose);
+  // display: inline-block;
+  // color: var(--color-white);
+
+  display: inline-flex;
+  gap: var(--button-gap, var(--space-gutter));
+  padding: var(--button-padding, 0.8em 1.5em);
+  background: var(--button-bg, var(--color-surface-bg));
+  color: var(--button-text, var(--color-surface-text));
+  line-height: var(--button-leading, var(--leading));
+  border-radius: var(--button-radius, 0);
+  text-decoration: none;
+  text-transform: var(--button-text-transform, capitalize);
+  font-weight: var(--button-font-weight, var(--font-weight-medium));
+  letter-spacing: var(--button-kerning, var(--kerning-loose));
+}
+
 // BUTTON STYLES
 button {
   // https://piccalil.li/blog/link-button
@@ -112,6 +155,24 @@ button {
   &:hover,
   &:focus {
     //
+  }
+}
+
+.button {
+  --flow-space: 1.5rem;
+  display: inline-flex;
+  padding: 1em 1.5em;
+  background: var(--color-eucaplyptus);
+  color: var(--color-dark-purple);
+  line-height: var(--leading-fine);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-semi-loose);
+  border: solid 3px var(--color-eucaplyptus);
+
+  &:hover {
+    background: transparent;
+    color: var(--color-eucaplyptus);
   }
 }
 

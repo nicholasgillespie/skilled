@@ -1,0 +1,50 @@
+.intro {
+  .l-columns > :first-child {
+    --columns-item-span: calc((var(--columns) / 5) * 3);
+  }
+
+  .l-columns > :last-child {
+    --columns-item-span: calc((var(--columns) / 5) * 2);
+  }
+
+  @media (max-width: 800px) {
+    background-color: red;
+
+    .l-columns > :first-child {
+      // --columns-item-span: calc((var(--columns) / 3) * 2);
+    }
+
+    .l-columns > :last-child {
+      // --columns-item-span: calc(var(--columns) / 3);
+    }
+  }
+
+  --measure: 33ch;
+
+  img {
+    --nav-block-size: calc(0.8em * 2) + calc(var(--leading) * 1em);
+    --header-block-size: calc(100% + var(--space-s-m) + var(--nav-block-size));
+    --space-img: clamp(3.875rem, 3.2549rem + 2.8758vw, 5.25rem);
+
+    object-fit: contain;
+    position: absolute;
+    top: calc(calc(var(--nav-block-size) + var(--space-s-m)) * -1);
+    bottom: 0;
+    margin: auto;
+    height: auto;
+    margin-inline-start: calc(var(--space-gutter) * -1);
+    margin-inline-start: calc(var(--space-img) * -1);
+    max-block-size: calc(var(--header-block-size) * 1.1);
+    transform: translateY(-6.6%);
+  }
+}
+
+// viewport : 100vw
+// layout base : 1110px
+// the image is initialy within an element that is 33% of the layout base
+// but I want it to take up the rest of the viewport
+
+// I want the image to shoot out taking up the rest of the viewport
+
+// 2 gutters : calc(var(--space-gutter) * 2)
+// grid-gap: var(--space-gutter)
