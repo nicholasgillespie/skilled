@@ -45,6 +45,14 @@
       margin: auto;
       inset-block-start: 0;
     }
+
+    .l-columns > :first-child {
+      // --columns-item-span: calc((var(--columns) / 3) * 2);
+    }
+
+    .l-columns > :last-child {
+      // --columns-item-span: calc(var(--columns) / 3);
+    }
   }
 }
 
