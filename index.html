@@ -50,19 +50,30 @@
             <a href="#" class="button" data-button="hero">Get Started</a>
           </div>
           <div class="l-columns--2/5">
-            <img
-              src="./images/image-hero-desktop.png"
-              alt="Hero"
-              width="1046"
-              height="938"
-              loading="eager"
-              srcset="
-                ./images/image-hero-mobile.png   435w,
-                ./images/image-hero-tablet.png   695w,
-                ./images/image-hero-desktop.png 1046w
-              "
-              sizes="(max-width: 600px) 435px, (max-width: 800px) 695px, 1046px"
-            />
+            <picture>
+              <source
+                srcset="./images/image-hero-desktop.webp"
+                media="(min-width: 801px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/image-hero-tablet.webp"
+                media="(min-width: 601px) and (max-width: 800px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/image-hero-mobile.webp"
+                media="(max-width: 600px)"
+                type="image/webp"
+              />
+              <img
+                src="./images/image-hero-desktop.png"
+                alt="Hero"
+                width="1046"
+                height="938"
+                loading="eager"
+              />
+            </picture>
           </div>
         </div>
       </section>
