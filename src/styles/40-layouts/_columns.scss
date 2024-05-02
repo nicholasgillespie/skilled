@@ -49,6 +49,6 @@
   }
 
   @include media-query("md") {
-    --columns: 1;
+    // --columns: 1;
   }
 }

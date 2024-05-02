@@ -34,10 +34,12 @@
               <span class="u-vh">Workit home page</span>
             </a>
           </li>
-          <li><a class="link" href="#">Get Started</a></li>
+          <li>
+            <a class="button" href="#">Get Started</a>
+          </li>
         </ul>
       </nav>
-      <section class="[ intro ]">
+      <section class="intro">
         <div class="[ l-columns l-region ][ u-position:relative ]">
           <div class="l-columns--3/5 l-flow">
             <h1>Maximize skill, minimize budget</h1>
@@ -45,30 +47,32 @@
               Our modern courses across a range of in-demand skills will give
               you the knowledge you need to live the life you want.
             </p>
-            <a href="#" class="button">Get Started</a>
+            <a href="#" class="button" data-button="hero">Get Started</a>
           </div>
           <div class="l-columns--2/5">
-            <img src="./public/images/image-hero-desktop.png" alt="Hero" />
+            <img
+              src="./images/image-hero-desktop.png"
+              alt="Hero"
+              width="1046"
+              height="938"
+              loading="eager"
+              srcset="
+                ./images/image-hero-mobile.png   435w,
+                ./images/image-hero-tablet.png   695w,
+                ./images/image-hero-desktop.png 1046w
+              "
+              sizes="(max-width: 600px) 435px, (max-width: 800px) 695px, 1046px"
+            />
           </div>
         </div>
       </section>
     </header>
 
-    <main>
-      <!-- <section class="[ intro ][ l-canvas ]">
-        <div class="l-columns l-region">
-          <div class="l-columns--2/3 l-flow">
-            <h1>Maximize skill, minimize budget</h1>
-            <p>
-              Our modern courses across a range of in-demand skills will give
-              you the knowledge you need to live the life you want.
-            </p>
-            <a href="#" class="button">Get Started</a>
-          </div>
-          <div class="[ l-columns--1/3 ][ u-position:relative ]">
-            <img src="./public/images/image-hero-desktop.png" alt="Hero" />
-        </div>
-      </section> -->
+    <main class="l-wrapper">
+      <!-- <ul class="l-grid">
+        <li class="l-box"></li>
+        <li class="l-box"></li>
+      </ul> -->
     </main>
 
     <footer>footer</footer>
