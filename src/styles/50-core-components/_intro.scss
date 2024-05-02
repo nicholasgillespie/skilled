@@ -1,16 +1,12 @@
 .intro {
   --measure: 33ch;
 
-  .l-columns > :first-child {
-    --columns-item-span: calc((var(--columns) / 5) * 3);
-  }
-
-  .l-columns > :last-child {
-    --columns-item-span: calc((var(--columns) / 5) * 2);
+  & > * {
+    // position: relative;
   }
 
   img {
-    --nav-block-size: calc(0.8em * 2) + calc(var(--leading-flat) * 1em);
+    --nav-block-size: calc(0.8em * 2) + calc(var(--leading) * 1em);
     --header-block-size: calc(100% + var(--space-s-m) + var(--nav-block-size));
     --space-img: clamp(4.375rem, 2.9657rem + 6.5359vw, 7.5rem);
 

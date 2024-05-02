@@ -4,23 +4,23 @@
  */
 
 .u-position {
-  &\:relative {
+  &--relative {
     position: relative;
   }
 
-  &\:absolute {
+  &--absolute {
     position: absolute;
   }
 
-  &\:fixed {
+  &--fixed {
     position: fixed;
   }
 
-  &\:sticky {
+  &--sticky {
     position: sticky;
   }
 
-  &\:static {
+  &--static {
     position: static;
   }
 }
