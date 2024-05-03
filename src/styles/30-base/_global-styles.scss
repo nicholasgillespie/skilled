@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  outline: solid 1px hotpink;
+  // outline: solid 1px hotpink;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -186,7 +186,8 @@ button {
   border: 2px solid var(--button-border, var(--color-surface-border));
   border-radius: var(--button-radius, 2em);
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     --button-bg: var(--color-surface-bg-interact);
   }
 
@@ -195,7 +196,8 @@ button {
     --button-padding: var(--space-s) var(--space-l);
     --button-bg: var(--color-orange-to-pink);
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.2);
     }
   }
