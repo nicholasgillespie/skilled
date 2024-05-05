@@ -1,0 +1,20 @@
+.courses {
+  --box-border-style: none;
+  --box-border-radius: 1rem;
+  // --space-region: 0 var(--space-region);
+
+  background: linear-gradient(var(--color-white), #f0f1ff);
+
+  li:first-of-type {
+    background: var(--color-orange-to-pink);
+
+    h2 {
+      color: var(--color-white);
+    }
+  }
+
+  li:not(:first-of-type) {
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.04) 3px 3px 3px 2px;
+  }
+}

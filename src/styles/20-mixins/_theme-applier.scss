@@ -38,6 +38,7 @@
 
         @if $property == "background-color" {
           $propOrAbbr: "background";
+          $property: "background";
         }
         @if $tokenName == "spacing" {
           $propOrAbbr: abbreviate(listToString($property));
@@ -58,6 +59,7 @@
     }
   }
 }
+
 // Mixin to generate custom utility classes from theme (use in 90-utilities/index.scss file)
 @mixin themeUtilityCustoms() {
   $tokenPrefixesProperties: (

@@ -20,9 +20,9 @@
   max-inline-size: unset;
   padding: var(--space-box, var(--space-gutter));
 
-  & * {
-    color: inherit;
-  }
+  // & * {
+  // color: inherit;
+  // }
 
   &[data-box="invert"] {
     --box-color: var(--color-global-bg);

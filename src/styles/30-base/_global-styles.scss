@@ -57,6 +57,7 @@ h4 {
   letter-spacing: -0.02ch;
   text-wrap: balance;
   hyphens: auto;
+  color: var(--color-heading-text);
 }
 
 h1 {
@@ -92,6 +93,7 @@ label {
 // TEXT ELEMENTS
 p {
   max-inline-size: var(--measure, 66ch);
+  text-wrap: pretty;
 }
 
 b {
