@@ -28,10 +28,8 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-header {
-  padding-block-start: get(space, s-m);
-  overflow: hidden;
-
+header,
+footer {
   nav {
     li {
       line-height: var(--leading-short);
@@ -41,6 +39,16 @@ header {
       vertical-align: top;
     }
   }
+}
+
+header {
+  padding-block-start: get(space, s-m);
+}
+
+footer {
+  padding-block: get(space, s-m);
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
 }
 
 main {
@@ -200,12 +208,18 @@ button {
 
     &:hover,
     &:focus-visible {
-      box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.2);
+      box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.4);
     }
   }
 
-  // &[data-button="alternate"] {
-  // }
+  &[data-button="alternate"] {
+    --button-bg: var(--color-purple-to-pink);
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.4);
+    }
+  }
 }
 
 // INTERACTIVE STATES ////////////////////
