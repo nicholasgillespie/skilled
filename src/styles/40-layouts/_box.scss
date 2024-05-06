@@ -19,6 +19,7 @@
   border-radius: var(--box-border-radius, 0);
   max-inline-size: unset;
   padding: var(--space-box, var(--space-gutter));
+  position: relative;
 
   // & * {
   // color: inherit;

@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  outline: solid 1px hotpink;
+  // outline: solid 1px hotpink;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -43,6 +43,7 @@ footer {
 
 header {
   padding-block-start: get(space, s-m);
+  overflow: hidden;
 }
 
 footer {
@@ -52,7 +53,7 @@ footer {
 }
 
 main {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 // TYPOGRAPHY ////////////////////
@@ -123,12 +124,18 @@ table {
 
 // INTERACTIVE ELEMENTS ////////////////////
 // A ELEMENT SPECIFICS
-a {
-  //
+.link {
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  color: var(--color-french-rose);
+  text-decoration: none;
+  text-underline-offset: 0;
 
   &:hover,
   &:focus {
-    //
+    text-decoration: none;
+    color: var(--color-cherry-blossom-pink);
   }
 
   &[aria-current="page"] {
@@ -140,47 +147,11 @@ a {
   }
 }
 
-.link {
-  // display: inline-flex;
-  // gap: var(--button-gap, var(--space-gutter));
-  // align-items: center;
-  // justify-content: center;
-
-  // padding: var(--button-padding, 0.8em 1.5em);
-  // line-height: get(line-height, short);
-  // background: var(--button-bg, var(--color-surface-bg));
-  // color: var(--button-text, var(--color-surface-text));
-  // font-size: var(--button-font-size, var(--text-size-base));
-  // font-family: var(--button-font, var(--font-display));
-  // font-weight: get(font-weight, medium);
-  // text-transform: capitalize;
-  // text-decoration: none;
-  // border: 2px solid var(--button-border, var(--color-surface-border));
-  // border-radius: var(--button-radius, 0);
-
-  // &:hover {
-  //   background: var(--color-surface-bg-interact);
-  //   color: var(--color-surface-text-interact);
-  // }
-
-  // &[data-button="badge"] {
-  //   --button-radius: 2em;
-  // }
-}
-
 // BUTTON STYLES
-button {
+.button {
   // https://piccalil.li/blog/link-button
   // https://piccalil.li/blog/use-transparent-borders-and-outlines-to-assist-with-high-contrast-mode
   // view sara soueidan's article on this
-
-  &:hover,
-  &:focus {
-    //
-  }
-}
-
-.button {
   display: inline-flex;
   gap: var(--button-gap, var(--space-gutter));
   align-items: center;
