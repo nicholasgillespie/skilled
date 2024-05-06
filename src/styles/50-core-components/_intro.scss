@@ -1,5 +1,6 @@
 .intro {
   --measure: 33ch;
+  --space-region: var(--space-xl-5xl);
 
   & > * {
     // position: relative;
@@ -20,7 +21,7 @@
     block-size: auto;
     margin-inline-start: calc(var(--space-img) * -1);
     max-block-size: calc(var(--header-block-size) * 1.1);
-    transform: translateY(-6.6%);
+    transform: translateY(-8.5%);
     z-index: -1;
   }
 
@@ -28,6 +29,7 @@
     img {
       --space-img: clamp(3.125rem, 1.9975rem + 5.2288vw, 5.625rem);
       transform: unset;
+      transform: translateY(-4.5%);
     }
   }
 
@@ -41,6 +43,11 @@
       position: relative;
       margin: auto;
       inset-block-start: 0;
+      transform: translateY(0%);
+    }
+
+    .l-region {
+      padding-block-end: 0;
     }
   }
 }
